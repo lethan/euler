@@ -1,4 +1,4 @@
-def largestTringlePath(filename)
+def largestTrianglePath(filename)
   file = File.open(filename, "r")
   triangle = []
   while line = file.gets
