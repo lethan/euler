@@ -2,5 +2,5 @@
 
 # What is the largest prime factor of the number 600851475143 ?
 
-require 'mathn'
+require 'prime'
 puts 600851475143.prime_division.last[0]

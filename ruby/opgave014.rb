@@ -15,25 +15,23 @@
 seq = {1 => 1}
 
 def calc_chain(val, seq)
-  if seq[val]
-    return seq[val]
+  return seq[val] if seq[val]
+
+  if val.even?
+    seq[val] = calc_chain(val / 2, seq) + 1
   else
-    if val.even?
-      seq[val] = calc_chain(val/2, seq) + 1
-    else
-      seq[val] = calc_chain(val*3+1, seq) + 1
-    end
+    seq[val] = calc_chain(val * 3 + 1, seq) + 1
   end
 end
 
-(1..1000000).each do |val|
+(1..1_000_000).each do |val|
   calc_chain(val, seq)
 end
 
-start = maximum = 0 
+start = maximum = 0
 
 seq.each do |key, value|
-	start, maximum = key, value if value > maximum
+  start, maximum = key, value if value > maximum
 end
 
 puts "Start value: " + start.to_s + ", steps: " + maximum.to_s

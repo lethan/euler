@@ -2,7 +2,7 @@
 #
 # Find the sum of all the primes below two million.
 
-require 'mathn'
+require 'prime'
 
 primes = Prime.take_while do |p|
   p <= 2000000

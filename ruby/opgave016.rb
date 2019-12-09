@@ -8,7 +8,7 @@ result = 0
 
 begin
   result += power % 10
-  power = power / 10
+  power /= 10
 end while power>0
 
 puts result

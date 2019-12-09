@@ -103,4 +103,4 @@ numbers = <<NUM
 53503534226472524250874054075591789781264330331690
 NUM
 
-puts numbers.split.map{|val| val.to_i}.inject(:+).to_s[0..9]
+puts numbers.split.map(&:to_i).inject(:+).to_s[0..9]

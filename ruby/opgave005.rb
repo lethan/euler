@@ -2,7 +2,7 @@
 #
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
-require 'mathn'
+require 'prime'
 
 def smallest(number)
   number = number.abs
@@ -10,14 +10,14 @@ def smallest(number)
     p <= number
   end
   primes.reverse!
-  
+
   factors = Array.new(primes.length).fill(0)
-  
+
   (1 .. number).each do |value|
     thisfac = Array.new(primes.length).fill(0)
-  
+
     primes.each_with_index do |prime, index|
-      while value % prime == 0 
+      while value % prime == 0
         value /= prime
         thisfac[index] += 1
       end
@@ -28,7 +28,7 @@ def smallest(number)
     end
   end
   result = 1
-  primes.each_with_index do |prime, index| 
+  primes.each_with_index do |prime, index|
     result *= prime ** factors[index]
   end
 

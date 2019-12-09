@@ -3,6 +3,6 @@
 # How many such routes are there through a 20×20 grid?
 
 edges = 20
-routes = (edges * 2).downto(1).inject(:*) / (edges.downto(1).inject(:*) ** 2)
+routes = (edges * 2).downto(1).inject(:*) / (edges.downto(1).inject(:*)**2)
 
 puts routes
