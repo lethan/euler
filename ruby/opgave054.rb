@@ -232,7 +232,7 @@ def winning_poker_hand(hand1, hand2)
 end
 
 player_one_wins = 0
-file = File.open('p054_poker.txt', 'r')
+file = File.open('../inputs/p054_poker.txt', 'r')
 while (line = file.gets)
   cards = line.strip.split(' ')
   hands = cards.each_slice(5).to_a

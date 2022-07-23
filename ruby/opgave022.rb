@@ -5,7 +5,7 @@
 # So, COLIN would obtain a score of 938 × 53 = 49714.
 
 # What is the total of all the name scores in the file?
-filename = "p022_names.txt"
+filename = "../inputs/p022_names.txt"
 file = File.open(filename, "r")
 names = []
 while line = file.gets

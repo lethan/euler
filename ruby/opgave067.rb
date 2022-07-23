@@ -15,4 +15,4 @@
 # years to check them all. There is an efficient algorithm to solve it. ;o)
 
 require './triangle.rb'
-puts largestTrianglePath("./p067_triangle.txt")
+puts largestTrianglePath("../inputs/p067_triangle.txt")
